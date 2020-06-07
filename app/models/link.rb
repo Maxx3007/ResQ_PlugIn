@@ -1,4 +1,7 @@
 class Link < ApplicationRecord
-  belongs_to :user
-  belongs_to :category
+
+	validates :url_links, presence: true
+
+  	belongs_to :user
+  	belongs_to :category
 end

@@ -1,3 +1,7 @@
 class Category < ApplicationRecord
-  has_many :links
+
+	validates :name, presence: true
+
+
+ 	has_many :links, dependent: :destroy
 end
