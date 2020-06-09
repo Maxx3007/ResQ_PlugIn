@@ -31,6 +31,11 @@ gem 'devise'
 
 gem 'rails_admin'
 
+gem 'simple_form'
+
+gem 'bootstrap', '~> 4.0.0'
+
+gem 'jquery-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
