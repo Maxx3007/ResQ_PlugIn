@@ -1,15 +1,36 @@
 <div class="banner">
   <div class="container m-5">
       <img class="logo_index" src="">
-      <p style="font-family:arial; font-size:125% "><strong>ResQ, a direction 
-WordPress plugin</strong></p>
+      <p style="font-family:arial; font-size:125% "><strong>ResQ, a direction WordPress plugin</strong></p>
   </div>
 </div>
 
 
-<div class="container m-5">
+<div class="container m-5 row">
 
-	<p style="font-family:arial; font-size:125% "><strong>DON’T LOOSE TRAFFIC, DEVELOP YOUR CSR</strong></p>
+	<div>
+		<div class="card m-5" style="width: 250px;">
+			<p>Animated  InDesign Elements</p>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<h1>peace of mind</h1>
+		</div>
+	</div>
+
+	<div calss="m-5">
+		<p style="font-family:arial; font-size:125% "><strong>DON’T LOOSE TRAFFIC, DEVELOP YOUR CSR</strong></p>
+		<p style="width: 500px;">So that sites that download ResQ don't worry about losing traffic, we found a simple but effective way to help: 
+we open the direction page in a new tab.
+
+We also direct users to the end-pages of the organizations, so they can easily access to what they are searching for and come back to your website! 
+
+This system allows websites to engage in causes that match their values and ambitions, while enabling them to keep growing their traffic 🚀</p>
+	</div>
+
+
 	
 
 </div>
@@ -17,27 +38,59 @@ WordPress plugin</strong></p>
 
 <div class="container">
 
-	<p style="font-family:arial; font-size:125% "><strong>THIS IS WHAT RESQ ACTUALLY LOOKS LIKE:
-</strong></p>
+	<div class="text-center">
+	<p style="font-family:arial; font-size:125% "><strong>THIS IS WHAT RESQ ACTUALLY LOOKS LIKE:</strong></p>
+		<%= video_tag "RESQ_Video.mp4", :size => "auto", :controls => true %>
+	</div>
 	
-	
-
 
 </div>
 
 
-<div class="container">
+<div class="container text-center m-5">
 	
 	<p style="font-family:arial; font-size:125% "><strong>CHOOSE A PLAN</strong></p>
-	<div class="d-flex">
-		<button>Download</button>
-		<button>Let's go</button>
-		<button>Let's go</button>
-		<button>Let's go</button>
+	<div class="d-flex text-center">
+		<div class="card m-1" style="width: 250px;">
+			<h1>Free Download</h1>
+			<p>ResQ Plugin As-Is, ready to be used.</p>
+			<br>
+			<p>for</p>
+			<h3><strong>Free</strong></h3>
+		</div>
+
+		<div class="card m-1" style="width: 250px;">
+			<h1>Choose your links</h1>
+			<p>Add and/or Select the first 3 links in the Donate Money list</p>
+			<br>
+			<p>from</p>
+			<h3><strong>€15 per Month</strong></h3>
+		</div>
+
+		<div class="card m-1" style="width: 250px;">
+			<h1>ResQ Plugin to your taste</h1>
+			<p>Your Design on our Plugin</p>
+			<br><br>
+			<p>from</p>
+			<h3><strong>€30</strong></h3>
+		</div>
+		<div class="card m-1" style="width: 250px;">
+			<h1>The tailor-made ResQ</h1>
+			<p>The Plugin to your taste + Choose your links</p>
+			<br>
+			<p>from</p>
+			<h3><strong>€30 + €15/month</strong></h3>
+		</div>
+
+
+
+
 	</div>
 
 </div>
 
 <div class="text-center">
-	<button>Learn More</button>
+	  <%= link_to 'About', pages_about_path, class: "btn btn-primary btn-lg m-5" %>
+
+	
 </div>
