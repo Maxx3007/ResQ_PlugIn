@@ -13,6 +13,13 @@
 
       <nav class="nav nav-pills nav-fill">
         <%= link_to 'Home Page', root_path, class: "btn nav-item nav-link" %>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          How does it work?
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <%= link_to 'For Users', pages_for_user_path, class: "dropdown-item" %>
+            <%= link_to 'For Websites', pages_for_website_path, class: "dropdown-item" %>
+          </div>
         <%= link_to 'Partnerships', pages_partnerships_path, class: "btn nav-item nav-link" %>
         <%= link_to 'Privacy', pages_privacy_path, class: "btn nav-item nav-link" %>
         <%= link_to 'About', pages_about_path, class: "btn nav-item nav-link" %>
