@@ -10,6 +10,14 @@
   </head>
 
   <body>
+
+      <nav class="nav nav-pills nav-fill">
+        <%= link_to 'Home Page', root_path, class: "btn nav-item nav-link" %>
+        <%= link_to 'Partnerships', pages_partnerships_path, class: "btn nav-item nav-link" %>
+        <%= link_to 'Privacy', pages_privacy_path, class: "btn nav-item nav-link" %>
+        <%= link_to 'About', pages_about_path, class: "btn nav-item nav-link" %>
+        <%= link_to 'Contact', pages_contact_path, class: "btn nav-item nav-link" %>
+      </nav>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>
