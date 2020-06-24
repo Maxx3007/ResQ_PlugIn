@@ -1,44 +1,71 @@
-<h2>Sign up</h2>
+<div class="banner" style="url(<%#= image_path "EthereumPurple.jpg" %>)">
+  <div class="container">
+      <%#= image_tag "Logo.jpg", width: "400", height: "100"%>
+      <p style=" font-size:125% "><strong>Let's be friends</strong></p>
+      <p>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+Since the beginning of our journey, we have met numerous people that helped us bring our initiative to life. 
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+You too can be part of this project.</p>
   </div>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.number_field :name %>
+</div>
+
+
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-normal">Sign Up to Contribute!</h1>
   </div>
 
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </div>
+<section class="form-auth centering">
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
 
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+      <div class="form-label-group ">
+      <%= f.text_field :name, autocomplete: "name", placeholder: "Name", class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      <div class="form-label-group ">
+      <%= f.select :type, User.types.map { |key, value| [key.humanize, key] }, autocomplete: "type", placeholder: "Type", class: "form-control" %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <div class="form-label-group ">
+      <%= f.text_field :end_point, autocomplete: "end_point", placeholder: "End Point", class: "form-control" %>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="form-label-group ">
+      <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+      </div>
+
+      <div class="form-label-group ">
+      <%= f.text_field :phone, autocomplete: "phone", placeholder: "Phone", class: "form-control" %>
+      </div>
+
+      <div class="form-label-group ">
+      <%= f.text_field :url, autocomplete: "url", placeholder: "Url", class: "form-control"%>
+      </div>
+
+      <div class="form-label-group ">
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control" %>
+      </div>
+
+
+      <div class="form-label-group">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password Confirmation", class: "form-control"%>
+      </div>
+     
+     <div class="form-label-group ">
+      <%= f.text_area :description, autocomplete: "description", placeholder: "Description", class: "form-control" %>
+      </div>
+
+
+
+    <div class="actions">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </div>
+  <% end %>
+
+</section>

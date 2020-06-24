@@ -10,27 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_06_161552) do
-
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "links", force: :cascade do |t|
-    t.string "url_links"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "category_id"
-    t.index ["category_id"], name: "index_links_on_category_id"
-    t.index ["user_id"], name: "index_links_on_user_id"
-  end
+ActiveRecord::Schema.define(version: 2020_06_06_122851) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.integer "type"
+    t.string "end_point"
     t.integer "phone"
     t.string "url"
     t.text "description"

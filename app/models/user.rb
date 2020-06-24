@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true
-  validates :type, presence: true
+  # validates :type, presence: true
   validates :phone, presence: true, numericality: true
   validates :url, presence: true
   validates :description, presence: true
@@ -11,7 +11,6 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  enum type: { association: "Association", for_profit: "Profit", government: "Government" }
 
-  has_many :links, dependent: :destroy
-  accepts_nested_attributes_for :links, allow_destroy: true, reject_if: :all_blank
 end
