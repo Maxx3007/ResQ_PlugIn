@@ -5,7 +5,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       ## Database authenticatable
       t.string :name
-      t.integer :type
+      t.integer :org_type
       t.string :end_point
       t.integer :phone
       t.string :url

@@ -26,7 +26,7 @@ You too can be part of this project.</p>
       </div>
 
       <div class="form-label-group ">
-      <%= f.select :type, User.types.map { |key, value| [key.humanize, key] }, autocomplete: "type", placeholder: "Type", class: "form-control" %>
+      <%= f.select :org_type, User.org_types.map { |key, value| [key.humanize, key] }, autocomplete: "type", placeholder: "Type", class: "form-control" %>
       </div>
 
       <div class="form-label-group ">
@@ -64,7 +64,8 @@ You too can be part of this project.</p>
 
 
     <div class="actions">
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <%#= f.submit "Send me reset password instructions", class:"btn btn-lg btn-primary btn-block", data: { confirm: 'Is the form correctly filled in?' } %>
+       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> 
     </div>
   <% end %>
 
