@@ -20,13 +20,18 @@
             <%= link_to 'For Users', pages_for_user_path, class: "dropdown-item" %>
             <%= link_to 'For Websites', pages_for_website_path, class: "dropdown-item" %>
           </div>
+        <% if current_user %>
+        <%= link_to 'Partnerships', pages_partnerships_path, class: "btn nav-item nav-link" %>
+        <% else %>
         <%= link_to 'Partnerships', new_user_registration_path, class: "btn nav-item nav-link" %>
+        <% end %>
         <%= link_to 'Privacy', pages_privacy_path, class: "btn nav-item nav-link" %>
         <%= link_to 'About', pages_about_path, class: "btn nav-item nav-link" %>
-        <%= link_to 'Contact', pages_contact_path, class: "btn nav-item nav-link" %>
+        <%= link_to 'Contact', new_message_path, class: "btn nav-item nav-link" %>
       </nav>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
+
