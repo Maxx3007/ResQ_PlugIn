@@ -21,6 +21,11 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'sassc-rails'
 gem 'simple_form'
+
+gem 'stripe'
+
+gem "figaro"
+
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 

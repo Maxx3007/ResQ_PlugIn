@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   get 'pages/privacy'
   get 'pages/about'
   get 'pages/contact'
-  # devise_for :users
   devise_for :users, controllers: { registrations: "registrations" }
+
+  resources :charges
 
 
 
