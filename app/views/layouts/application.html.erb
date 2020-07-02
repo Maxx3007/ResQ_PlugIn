@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>ResQ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= action_cable_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'shared/flashes' %>
+    <%= render 'shared/navbar_resq' %>
 
-      <nav class="nav nav-pills nav-fill">
-        <%= link_to 'Home Page', root_path, class: "btn nav-item nav-link" %>
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          How does it work?
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <%= link_to 'For Users', pages_for_user_path, class: "dropdown-item" %>
-            <%= link_to 'For Websites', pages_for_website_path, class: "dropdown-item" %>
-          </div>
-        <% if current_user %>
-        <%= link_to 'Partnerships', pages_partnerships_path, class: "btn nav-item nav-link" %>
-        <% else %>
-        <%= link_to 'Partnerships', new_user_registration_path, class: "btn nav-item nav-link" %>
-        <% end %>
-        <%= link_to 'Privacy', pages_privacy_path, class: "btn nav-item nav-link" %>
-        <%= link_to 'About', pages_about_path, class: "btn nav-item nav-link" %>
-        <%= link_to 'Contact', new_message_path, class: "btn nav-item nav-link" %>
-      </nav>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="pages_container">
+      <%= yield %>
+    </div>
+
+    <%= render 'shared/footer_resq' %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
   </body>
 </html>
 
