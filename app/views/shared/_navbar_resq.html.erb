@@ -21,19 +21,16 @@
 <nav class="navbar_resq">
 
   <ul class="navbar-links">
-    <li class="navbar-item">
+    <li class="navbar-item resq-logo">
+      <%= link_to root_path  do %>
+        <%= image_tag("ResQ_Logo.png", alt: "Resq Plugin Logo - A Socially Responsible Plugin") %>
+      <% end %>
+    </li>
+    <li class="navbar-item home-link">
       <%= link_to "Home", root_path %>
     </li>
     <li class="navbar-item nav-item">
-
       <a id="navbar_dropdown">How does it work?</a>
-      <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        How does it work?
-      </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <%#= link_to 'For Users', pages_for_user_path, class: "dropdown-item" %>
-          <%#= link_to 'For Websites', pages_for_website_path, class: "dropdown-item" %>
-        </div> -->
       <div class="nav-content">
         <div class="nav-sub">
           <ul>
@@ -46,7 +43,12 @@
           </ul>
         </div>
       </div>
-
+    </li>
+    <li class="navbar-item nav-item-small">
+      <%= link_to "For Users", pages_for_user_path %>
+    </li>
+    <li class="navbar-item nav-item-small">
+      <%= link_to "For Websites", pages_for_website_path %>
     </li>
     <li class="navbar-item">
       <% if current_user %>
@@ -61,8 +63,20 @@
     <li class="navbar-item">
       <%= link_to "Contact", new_message_path %>
     </li>
+    <li class="navbar-item">
+      <%= link_to "FR", "#" %> | <%= link_to "IT", "#" %> | <%= link_to "NL", "#" %>
+    </li>
+    <li class="navbar-item">
+      <div class="button_resq">
+        <%= link_to "Get Started", "#" %>
+      </div>
+    </li>
   </ul>
-  <div class="logo"><%= link_to "root_path", root_path %></div>
+  <div class="logo">
+    <%= link_to root_path do %>
+      <%= image_tag("ResQ_Logo.png", alt: "Resq Plugin Logo - A Socially Responsible Plugin") %>
+    <% end %>
+  </div>
   <div class="burger">
     <div class="line1"></div>
     <div class="line2"></div>

@@ -52,13 +52,19 @@
 
 
 <div class="centering">
-	<a href="" class="btn btn-primary btn-lg m-5">Download</a>
+  <div class="button_resq">
+    <%= link_to 'Download', '#' %>
+  </div>
 </div>
 
 <div class="centering">
 
-		<a href="" class="btn btn-primary btn-lg m-5">Get in touch!</a>
-		<a href="" class="btn btn-primary btn-lg m-5">Rate us!</a>	
+    <div class="button_resq">
+      <%= link_to 'Get in touch!', new_message_path %>
+    </div>
+    <div class="button_resq">
+		  <a href="#" target="_blank">Rate us!</a>
+    </div>
 
 </div>
 
@@ -67,10 +73,10 @@
 <div class="container text-center m-5">
 
 	<p style="font-family:arial; font-size:125% "><strong>CHOOSE A PLAN</strong></p>
-	
+
 	<div class="centering">
-		
-	
+
+
 		<div class="d-flex text-center">
 		<div class="card m-1" style="width: 250px;">
 			<h1>Free Download</h1>
