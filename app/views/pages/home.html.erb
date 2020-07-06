@@ -1,113 +1,243 @@
-<div class="banner">
-  <div class="container m-5">
-      <img class="logo_index" src="">
-      <p style="font-family:arial; font-size:125% "><strong>ResQ, a direction WordPress plugin</strong></p>
+<div class="home_grid">
+  <div class="home_intro">
+    <h2>ResQ, a direction<br><strong>WordPress plugin</strong></h2>
+    <p>
+      ResQ is a fairly <strong>simple tool</strong>. It allows users to be directed to pages of <strong>associations or support networks</strong>.
+      <br>
+      <br>
+      To better understand it, use it!<br>
+      It actually is the bubble on your right  👉
+    </p>
+    <div class="direction_btns">
+      <div class="button_resq">
+        <%= link_to 'Download', '#' %>
+      </div>
+      <div class="button_resq">
+        <%= link_to 'Learn More', pages_for_website_path %>
+      </div>
+    </div>
+  </div>
+
+  <div class="in_illustration">
+    <%= image_tag("Rocketpool.png", alt: "Resq Plugin Logo - A Socially Responsible Plugin") %>
+  </div>
+</div>
+
+<div class="home_features">
+  <div class="features_card">
+    <div class="features_title">
+      <h3><strong>Features</strong></h3>
+      <p>These form the basis of our services</p>
+    </div>
+    <div class="features_columns">
+      <div class="features_item">
+        <div class="features_picto">
+
+        </div>
+        <strong>Personalizable</strong>
+      </div>
+      <div class="features_item">
+        <div class="features_picto">
+
+        </div>
+        <strong>Secured Links</strong>
+      </div>
+      <div class="features_item">
+        <div class="features_picto">
+
+        </div>
+        <strong>Redirection to trusted NGOs</strong>
+      </div>
+    </div>
+    <div class="features_columns">
+      <div class="features_item">
+        <div class="features_picto">
+
+        </div>
+        <strong>Lean & accurate UI</strong>
+      </div>
+      <div class="features_item">
+        <div class="features_picto">
+
+        </div>
+        <strong>Engagement drives customers back</strong>
+      </div>
+      <div class="features_item">
+        <div class="features_picto">
+
+        </div>
+        <strong>End-page, opened in a new tab</strong>
+      </div>
+    </div>
   </div>
 </div>
 
 
-<div class="container m-5 row">
-
-	<div>
-		<div class="card m-5" style="width: 250px;">
-			<p>Animated  InDesign Elements</p>
-			<br>
-			<br>
-			<br>
-			<br>
-
-			<h1>peace of mind</h1>
-		</div>
-	</div>
-
-	<div calss="m-5">
-		<p style="font-family:arial; font-size:125% "><strong>DON’T LOOSE TRAFFIC, DEVELOP YOUR CSR</strong></p>
-		<p style="width: 500px;">So that sites that download ResQ don't worry about losing traffic, we found a simple but effective way to help:
-we open the direction page in a new tab.
-
-We also direct users to the end-pages of the organizations, so they can easily access to what they are searching for and come back to your website!
-
-This system allows websites to engage in causes that match their values and ambitions, while enabling them to keep growing their traffic 🚀</p>
-	</div>
-
-
-
-
-</div>
-
-
-<div class="container">
-
-	<div class="text-center">
-	<p style="font-family:arial; font-size:125% "><strong>THIS IS WHAT RESQ ACTUALLY LOOKS LIKE:</strong></p>
-		<%= video_tag "RESQ_Video.mp4", :size => "auto", :controls => true %>
-	</div>
-
-
-</div>
-
-
-<div class="container text-center m-5">
-
-	<p style="font-family:arial; font-size:125% "><strong>CHOOSE A PLAN</strong></p>
-	<div class="d-flex text-center">
-		<div class="card m-1" style="width: 250px;">
-			<h1>Free Download</h1>
-			<p>ResQ Plugin As-Is, ready to be used.</p>
-			<br>
-			<p>for</p>
-			<h3><strong>Free</strong></h3>
-		</div>
-
-		<div class="card m-1" style="width: 250px;">
-			<h1>Choose your links</h1>
-			<p>Add and/or Select the first 3 links in the Donate Money list</p>
-			<br>
-			<p>from</p>
-			<h3><strong>€15 per Month</strong></h3>
-			<%= form_tag charges_path do %>
-				  <article>
-				    <% if flash[:error].present? %>
-				      <div id="error_explanation">
-				        <p><%= flash[:error] %></p>
-				      </div>
-				    <% end %>
-				  </article>
-
-				  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-				          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-				          data-description="A month's subscription"
-				          data-amount="500"
-				          data-locale="auto"></script>
-			<% end %>
-		</div>
-
-		<div class="card m-1" style="width: 250px;">
-			<h1>ResQ Plugin to your taste</h1>
-			<p>Your Design on our Plugin</p>
-			<br><br>
-			<p>from</p>
-			<h3><strong>€30</strong></h3>
-		</div>
-		<div class="card m-1" style="width: 250px;">
-			<h1>The tailor-made ResQ</h1>
-			<p>The Plugin to your taste + Choose your links</p>
-			<br>
-			<p>from</p>
-			<h3><strong>€30 + €15/month</strong></h3>
-		</div>
-
-
-
-
-	</div>
-
-</div>
-
-<div class="centering">
-  <div class="button_resq">
-	  <%= link_to 'About', pages_about_path %>
+<div class="home_grid" id="home_grid_2">
+	<div class="in_illustration">
+    <%= image_tag("Rocketpool.png", alt: "Resq Plugin Logo - A Socially Responsible Plugin") %>
   </div>
 
+	<div class="home_intro" id="home_intro_2">
+		<h2>Don't lose traffic,<br> <strong>Develop your CSR</strong></h2>
+		<p">So that sites that download ResQ <strong>don't worry about losing traffic</strong>, we found a simple but effective way to help:
+      <br><strong>we open the direction page in a new tab</strong>.
+      <br>
+      <br>
+      We also <strong>direct users to the end-pages</strong> of the organizations, so they can easily access to what they are searching for and come back to your website!
+      <br>
+      <br>
+      This system allows websites to <strong>engage in causes</strong> that match their values and ambitions, while enabling them to <strong>keep growing their traffic</strong> 🚀
+    </p>
+	</div>
 </div>
+
+
+<div class="video_cont">
+
+	<div class="video_card">
+	  <h2><strong>THIS IS WHAT RESQ ACTUALLY LOOKS LIKE:</strong></h2>
+		<%= video_tag "RESQ_Video.mp4", autoplay: true, loop: true, controls: true, muted: 'muted' %>
+	</div>
+
+
+</div>
+
+
+<div class="plan_cont">
+
+  <div class="plan_title">
+  	<h2><strong>Choose your offer</strong></h2>
+    <p>Choose the tailored version that fits your needs</p>
+  </div>
+
+	<div class="plan_grid">
+
+		<div class="plan_card">
+      <div class="offer_title">
+			  <h3>Free Download</h3>
+      </div>
+      <div class="offer_separation_line"></div>
+      <div class="offer_info">
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+  			  <p>ResQ Plugin As-Is, ready to be used</p>
+        </div>
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Download ResQ for free and install it on your site</p>
+        </div>
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+  			  <p>That’s it! Everyone can use ResQ plugin throught your site now !</p>
+        </div>
+      </div>
+      <div class="offer_link">
+        <div class="button_resq">
+          <%= link_to "Let's Go!", '#' %>
+        </div>
+      </div>
+		</div>
+
+		<div class="plan_card">
+      <div class="offer_title">
+			  <h3>Choose your links</h3>
+  			<p>from €15/month</p>
+      </div>
+      <div class="offer_separation_line"></div>
+      <div class="offer_info">
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Add and/or Select the first 3 links in the Donate Money list</p>
+        </div>
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>We grant ourselves the right to refuse the proposed links if they disagree with our internal selection policy).</p>
+        </div>
+      </div>
+      <div class="offer_link">
+          <%#= link_to "Let's Go!", '#' %>
+    			<%= form_tag charges_path do %>
+    				  <article>
+    				    <% if flash[:error].present? %>
+    				      <div id="error_explanation">
+    				        <p><%= flash[:error] %></p>
+    				      </div>
+    				    <% end %>
+    				  </article>
+
+    				  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    				          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    				          data-description="A month's subscription"
+    				          data-amount="500"
+    				          data-locale="auto">
+              </script>
+              <script>
+                // Hide default stripe button, be careful there if you
+                // have more than 1 button of that class
+                document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+              </script>
+              <button type="submit" class="button_resq">Let's Go</button>
+    			<% end %>
+      </div>
+		</div>
+
+		<div class="plan_card">
+      <div class="offer_title">
+  			<h3>ResQ Plugin to your taste</h3>
+  			<p>from €30/month</p>
+      </div>
+      <div class="offer_separation_line"></div>
+      <div class="offer_info">
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+  			  <p>Create your very own plugin </p>
+        </div>
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Add your design, your colors to have a plugin consistent with your site</p>
+        </div>
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>We are available to review the plugin with you whenever you like </p>
+        </div>
+      </div>
+      <div class="offer_link">
+        <div class="button_resq">
+          <%= link_to "Let's Go!", '#' %>
+        </div>
+      </div>
+		</div>
+
+		<div class="plan_card">
+      <div class="offer_title">
+  			<h3>The tailor-made ResQ</h3>
+  			<p>from €45/month</p>
+      </div>
+      <div class="offer_separation_line"></div>
+      <div class="offer_info">
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+  			  <p>Create your very own plugin by choosing your links and design</p>
+        </div>
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>We are available to review the plugin with you whenever you like </p>
+        </div>
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Benefit from our CSR and webdevelopment advices</p>
+        </div>
+      </div>
+      <div class="offer_link">
+        <div class="button_resq">
+          <%= link_to "Let's Go!", '#' %>
+        </div>
+      </div>
+		</div>
+
+	</div>
+
+</div>
+
 

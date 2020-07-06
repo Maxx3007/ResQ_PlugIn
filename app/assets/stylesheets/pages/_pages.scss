@@ -2,10 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  font-family: 'Raleway', sans-serif;
+  color: $Black;
+}
+
 .pages_container {
   position: relative;
   top: 14vh;
-  padding: 5vh 0;
+
+  overflow: hidden;
+  width: 100vw;
+  padding: 8vh 0;
 }
 
 .centering {
@@ -18,4 +26,10 @@
   -webkit-align-items: center;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .pages_container {
+    padding: 0;
+  }
 }
