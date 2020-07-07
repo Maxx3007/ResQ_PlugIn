@@ -1,1 +1,206 @@
+// Plan Card
 
+.plan_cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 86vh;
+  width: 100vw;
+
+  margin: 5vh 0;
+  padding: 3vh 5vw;
+}
+
+.plan_title {
+  text-align: center;
+
+  margin-bottom: 5vh;
+}
+
+.plan_title h2 {
+  color: $OchreRed;
+}
+
+.plan_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 24px;
+}
+
+.plan_card {
+  height: 65vh;
+  width: 100%;
+
+  box-shadow: 1px 1px 9px $Black15;
+  border-radius: 5px;
+
+  padding: 7%;
+}
+
+.offer_title {
+  height: 25%;
+  width: 100%;
+}
+
+.offer_title p {
+  margin-bottom: 0;
+}
+
+.offer_separation_line {
+  height: 1px;
+  width: 100%;
+
+  background-color: $Black45;
+
+  border-radius: 2px;
+}
+
+.offer_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  height: 65%;
+  width: 100%;
+}
+
+.offer_descr {
+  display: flex;
+  align-items: flex-start;
+}
+
+.offer_descr p {
+  margin-bottom: 0;
+}
+
+.offer_descr img {
+  height: 1rem;
+  width: 1rem;
+
+  margin-top: 7px;
+  margin-right: 7px;
+}
+
+.offer_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 10%;
+  width: 100%;
+}
+
+// Video Card
+
+.video_cont {
+  height: 90vh;
+  width: 100vw;
+
+  background-image: linear-gradient(to right, $LinearRedDark, $OchreRed);
+
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+
+.video_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.video_card video {
+  height: 70%;
+  width: 70%;
+}
+
+.video_card video:focus {
+  outline: none !important;
+}
+
+.video_card h2 {
+  color: $White;
+}
+
+// Features Card
+
+.features_card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 7%;
+
+  height: 188px;
+  width: 70vw;
+
+  box-shadow: 1px 1px 9px $Black15;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .plan_cont {
+    height: 200vh;
+  }
+
+  .plan_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .plan_card {
+    height: 75vh;
+  }
+
+  .offer_title h3 {
+    font-size: 18px;
+  }
+
+  .offer_title {
+    font-size: 13px;
+  }
+
+  .offer_descr {
+    font-size: 12px;
+  }
+
+  .video_cont {
+    height: 60vh;
+  }
+
+  .video_card video {
+    height: 60%;
+    width: 90%;
+  }
+
+  .video_card h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .features_card {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-gap: 0%;
+    padding: 0 5%;
+    height: 80vh;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .plan_cont {
+    height: 300vh;
+  }
+
+  .plan_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan_card {
+    height: 65vh;
+  }
+}
