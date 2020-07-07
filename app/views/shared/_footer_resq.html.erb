@@ -10,6 +10,7 @@
   <div class="footer_right">
 
     <div class="footer_top">
+
       <h4>
         <% if current_user %>
           <%= link_to 'Partnerships', pages_partnerships_path %>
@@ -25,11 +26,13 @@
       <h4>
         <%= link_to "Contact Us", new_message_path %>
       </h4>
+
     </div>
 
     <div class="horizontal_footer_line"></div>
 
     <div class="footer_bottom">
+
       <div class="footer_bottom_left">
         <h4>
           <%= link_to "About us", pages_about_path %>
@@ -45,18 +48,22 @@
         <%= link_to image_tag("twitter.svg"), "https://twitter.com/ResqPlugin", target: '_blank' %>
         <%= link_to image_tag("linkedin.svg"), "https://www.linkedin.com/company/resq-plugin/", target: '_blank' %>
       </div>
+
     </div>
 
   </div>
 
   <div class="footer_small">
+
     <div class="footer_left_small">
+
       <div class="footer_link">
         <%= link_to "#", class: "navbar-brand-small" do %>
           <%= image_tag("ResQ_Logo_Full_White.png", alt: "Resq Plugin Logo - A Socially Responsible Plugin") %>
         <% end %>
         <p>A socially<br>responsible plugin</p>
       </div>
+
       <div class="footer_link">
         <h6>
           <% if current_user %>
@@ -66,16 +73,19 @@
           <% end %>
         </h6>
       </div>
+
       <div class="footer_link">
         <h6>
           <%= link_to "Privacy Policies", pages_privacy_path %>
         </h6>
       </div>
+
       <div class="footer_link">
         <h6>
           <%= link_to "About us", pages_about_path %>
         </h6>
       </div>
+
     </div>
 
     <div class="vertical_footer_line"></div>
@@ -91,22 +101,31 @@
       <div class="footer_link">
         <h6>Follow us</h6>
       </div>
+
       <div class="footer_small_grid">
+
         <div class="footer_link">
           <%= link_to image_tag("instagram.svg"), "https://www.instagram.com/resq.plugin/", target: '_blank' %>
         </div>
+
         <div class="footer_link">
           <%= link_to image_tag("facebook.svg"), "https://www.facebook.com/resqplugin", target: '_blank' %>
         </div>
+
         <div class="footer_link">
           <%= link_to image_tag("twitter.svg"), "https://twitter.com/ResqPlugin", target: '_blank' %>
         </div>
+
         <div class="footer_link">
           <%= link_to image_tag("linkedin.svg"), "https://www.linkedin.com/company/resq-plugin/", target: '_blank' %>
         </div>
+
       </div>
+
     </div>
 
     </div>
+
   </div>
+
 </div>

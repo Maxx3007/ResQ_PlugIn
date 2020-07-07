@@ -1,15 +1,19 @@
 .banner{
-  width:60%;
+  position:relative;
+
+  display: flex;
+  align-items:center;
+  justify-content:center;
+
   height: 200px;
+  width:60%;
+
+  margin: auto;
+  margin-bottom: 100px;
+  border-radius:20px;
+
+  background-color: rgba(191, 191, 191, 1);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  position:relative;
-  display: flex;
-  margin: auto;
-  align-items:center;
-  justify-content:center;
-  background-color:rgba(191, 191, 191, 1);
-  border-radius:20px;
-  margin-bottom: 100px;
 }
