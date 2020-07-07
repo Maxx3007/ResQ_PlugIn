@@ -16,20 +16,23 @@
   text-align: center;
   background-color: $success;
 
+  z-index: 10000;
 }
 
 .auto-hide {
   position: absolute;
+  top: 0;
+  left: 0;
+
+  overflow: show;
 
   display: block;
 
   z-index: 10000;
 
-  width: 100vw;
-  top: 0;
-  left: 0;
   height: 60px;
-  overflow: show;
+  width: 100vw;
+
   -webkit-animation: disappear 0.3s forwards;
           animation: disappear 0.3s forwards;
   -webkit-animation-delay: 2.7s;

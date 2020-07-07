@@ -1,18 +1,22 @@
 // All CSS linked to Navbar
 .navbar_resq {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: $White;
-  width: 100vw;
+
   height: 14vh;
-  position: fixed;
-  font-family: 'Raleway', sans-serif;
+  width: 100vw;
   margin-bottom: 0;
-  z-index: 20000;
-  top: 0px;
-  left: 0px;
+
+  background-color: $White;
+  font-family: 'Raleway', sans-serif;
   box-shadow: 0px 0px 2px $Black;
+
+  z-index: 20000;
 }
 
 .navbar-item img {
@@ -29,11 +33,13 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0 4vw;
-  width: 100vw;
+
   height: 8vh;
-  letter-spacing: 2px;
+  width: 100vw;
+  padding: 0 4vw;
   margin-bottom: 0px;
+
+  letter-spacing: 2px;
 }
 
 .navbar-links li {
@@ -50,14 +56,14 @@
 
 .navbar-item :hover{
   text-decoration: none;
-  // color: #F4F4F4;
   color: $OchreRed;
-  // opacity: 70%;
+
   cursor: pointer;
 }
 
 .burger {
   display: none;
+
   cursor: pointer;
 }
 
@@ -71,6 +77,7 @@
 
 .logo {
   display: none;
+
   cursor: pointer;
 }
 
@@ -79,19 +86,23 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
+
   .navbar-item :hover{
     text-decoration: none;
     color: $Black;
+
     cursor: pointer;
   }
 }
 
 .burger div {
-  width: 25px;
   height: 2px;
-  background-color: $Black;
+  width: 25px;
   margin: 5px;
+
+  background-color: $Black;
   border-radius: 5px;
+
   transition: all 0.3s ease;
 }
 
@@ -99,6 +110,7 @@
 
 #navbar_dropdown {
   color: $Black;
+
   &:hover {
     color: $OchreRed;
   }
@@ -110,9 +122,10 @@
   left: 15vw;
 
   overflow: hidden;
-  background-color: $White;
+
   max-height: 0;
 
+  background-color: $White;
   box-shadow: 0px 0px 9px $Black45;
   border-radius: 10px;
 }
@@ -140,17 +153,20 @@
 .nav-sub ul li a {
   display: flex;
   align-items: center;
-  padding-left: 20px;
+
   height: 40px;
   width: 85%;
+  padding-left: 20px;
 }
 
 .nav-sub li {
-  width: 200px;
-  background-color: $White;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  width: 200px;
+
+  background-color: $White;
 }
 
 .nav-sub  i {
@@ -183,25 +199,31 @@
   }
 
   .navbar_resq {
-    justify-content: space-between;
-    padding: 0 5vw;
     position: fixed;
-    height: 10vh;
     top: 0;
     left: 0;
+
+    justify-content: space-between;
+
+    height: 10vh;
+    padding: 0 5vw;
   }
 
   .navbar-links {
     position: absolute;
-    right: 0px;
-    height: 92vh;
     top: 8vh;
-    background-color: $White;
+    right: 0px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    height: 92vh;
     width: 50vw;
+
+    background-color: $White;
+
     transform: translateX(100vw);
     transition: transform 0.5s ease-in;
   }
@@ -232,6 +254,7 @@
 
   .logo {
     display: block;
+
     text-transform: uppercase;
     letter-spacing: 2px;
     color: $Black;

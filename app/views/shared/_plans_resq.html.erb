@@ -1,0 +1,179 @@
+<div class="plan_cont">
+
+  <div class="plan_title">
+    <h2><strong>Choose your offer</strong></h2>
+    <p>Choose the tailored version that fits your needs</p>
+  </div>
+
+  <div class="plan_grid">
+
+    <div class="plan_card">
+
+      <div class="offer_title">
+        <h3><strong>Free Download</strong></h3>
+      </div>
+
+      <div class="offer_separation_line"></div>
+
+      <div class="offer_info">
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>ResQ Plugin As-Is, ready to be used</p>
+        </div>
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Download ResQ for free and install it on your site</p>
+        </div>
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>That’s it! Everyone can use ResQ plugin throught your site now !</p>
+        </div>
+
+      </div>
+
+      <div class="offer_link">
+
+        <div class="button_resq">
+          <%= link_to "Free Download", '#' %>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="plan_card">
+
+      <div class="offer_title">
+        <h3><strong>Choose your links</strong></h3>
+        <p>from €15/month</p>
+      </div>
+
+      <div class="offer_separation_line"></div>
+
+      <div class="offer_info">
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Add and/or Select the first 3 links in the Donate Money list</p>
+        </div>
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>We grant ourselves the right to refuse the proposed links if they disagree with our internal selection policy).</p>
+        </div>
+
+      </div>
+
+      <div class="offer_link">
+
+          <%= form_tag charges_path do %>
+              <article>
+                <% if flash[:error].present? %>
+                  <div id="error_explanation">
+                    <p><%= flash[:error] %></p>
+                  </div>
+                <% end %>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-description="A month's subscription"
+                      data-amount="500"
+                      data-locale="auto">
+              </script>
+
+              <script>
+                // Hide default stripe button, be careful there if you
+                // have more than 1 button of that class
+                document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+              </script>
+
+              <button type="submit" class="button_resq">Let's Go!</button>
+          <% end %>
+
+      </div>
+
+    </div>
+
+    <div class="plan_card">
+
+      <div class="offer_title">
+        <h3><strong>ResQ Plugin to your taste</strong></h3>
+        <p>from €30/month</p>
+      </div>
+
+      <div class="offer_separation_line"></div>
+
+      <div class="offer_info">
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Create your very own plugin </p>
+        </div>
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Add your design, your colors to have a plugin consistent with your site</p>
+        </div>
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>We are available to review the plugin with you whenever you like </p>
+        </div>
+
+      </div>
+
+      <div class="offer_link">
+
+        <div class="button_resq">
+          <%= link_to "Let's Go!", '#' %>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="plan_card">
+
+      <div class="offer_title">
+        <h3><strong>The tailor-made ResQ</strong></h3>
+        <p>from €45/month</p>
+      </div>
+
+      <div class="offer_separation_line"></div>
+
+      <div class="offer_info">
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Create your very own plugin by choosing your links and design</p>
+        </div>
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>We are available to review the plugin with you whenever you like </p>
+        </div>
+
+        <div class="offer_descr">
+          <%= image_tag("tick.png", alt: "tick") %>
+          <p>Benefit from our CSR and webdevelopment advices</p>
+        </div>
+
+      </div>
+
+      <div class="offer_link">
+
+        <div class="button_resq">
+          <%= link_to "Let's Go!", '#' %>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

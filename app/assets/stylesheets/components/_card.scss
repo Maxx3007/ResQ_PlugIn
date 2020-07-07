@@ -44,6 +44,11 @@
   width: 100%;
 }
 
+.offer_title h3 {
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
 .offer_title p {
   margin-bottom: 0;
 }
@@ -142,9 +147,9 @@
   border-radius: 5px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .plan_cont {
-    height: 200vh;
+    height: 130vh;
   }
 
   .plan_grid {
@@ -152,7 +157,7 @@
   }
 
   .plan_card {
-    height: 75vh;
+    height: 55vh;
   }
 
   .offer_title h3 {
@@ -185,9 +190,11 @@
     grid-template-columns: unset;
     grid-template-rows: 1fr 2fr 2fr;
     grid-gap: 0%;
-    padding: 0 5%;
+
     height: 80vh;
     width: 80vw;
+
+    padding: 0 5%;
   }
 }
 
