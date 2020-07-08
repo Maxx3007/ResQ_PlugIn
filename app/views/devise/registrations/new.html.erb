@@ -1,5 +1,5 @@
 <div class="banner" style="url(<%#= image_path "EthereumPurple.jpg" %>)">
-  <div class="container">
+  <div class="container text-center">
       <%#= image_tag "Logo.jpg", width: "400", height: "100"%>
       <p style=" font-size:125% "><strong>Let's be friends</strong></p>
       <p>
@@ -15,58 +15,40 @@ You too can be part of this project.</p>
     <h1 class="h3 mb-3 font-weight-normal">Sign Up to Contribute!</h1>
   </div>
 
-<section class="form-auth centering">
+<div class="container">
+  
+
+  <div class="form-inputs">
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
+      <%= f.input :name %>
+    
+      <div class="p">Organisation type</div>
+      <%= f.select :org_type, User.org_types.map { |key, value| [key.humanize, key] }, { include_blank: true }, class: "form-control" %>
 
-      <div class="form-label-group ">
-      <%= f.text_field :name, autocomplete: "name", placeholder: "Name", class: "form-control" %>
-      </div>
-
-      <div class="form-label-group ">
-      <%= f.select :org_type, User.org_types.map { |key, value| [key.humanize, key] }, autocomplete: "type", placeholder: "Type", class: "form-control" %>
-      </div>
-
-      <div class="form-label-group ">
-      <%= f.text_field :end_point, autocomplete: "end_point", placeholder: "End Point", class: "form-control" %>
-      </div>
-
-      <div class="form-label-group ">
-      <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "form-control" %>
-      </div>
-
-      <div class="form-label-group ">
-      <%= f.text_field :phone, autocomplete: "phone", placeholder: "Phone", class: "form-control" %>
-      </div>
-
-      <div class="form-label-group ">
-      <%= f.text_field :url, autocomplete: "url", placeholder: "Url", class: "form-control"%>
-      </div>
-
-      <div class="form-label-group ">
+      <%= f.input :end_point %>
+ 
+      <%= f.input :email%>
+      <%= f.input :phone%>
+      <%= f.input :url%>
+    
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control" %>
-      </div>
+      <%= f.input :password %>
+    
 
+      <%= f.input :password_confirmation%>
+      <%= f.input :description %>
+    
 
-      <div class="form-label-group">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password Confirmation", class: "form-control"%>
-      </div>
-     
-     <div class="form-label-group ">
-      <%= f.text_area :description, autocomplete: "description", placeholder: "Description", class: "form-control" %>
-      </div>
-
-
-
-    <div class="actions">
-      <%#= f.submit "Send me reset password instructions", class:"btn btn-lg btn-primary btn-block", data: { confirm: 'Is the form correctly filled in?' } %>
-       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button> 
+    <div class="actions text-center">
+      <%= f.button :submit, class: "btn-primary" %>
     </div>
   <% end %>
 
-</section>
+  </div>
+
+</div>
