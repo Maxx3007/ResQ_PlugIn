@@ -67,8 +67,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-color: $Black15;
 }
 
 .home_features {
@@ -112,12 +110,11 @@
   font-size: 12px;
 }
 
-.features_picto {
+.features_picto img {
+  object-fit: cover;
   height: 30px;
   width: 30px;
   margin-right: 12px;
-
-  background-color: $Black15;
 }
 
 @media screen and (max-width: 800px) {
@@ -196,12 +193,12 @@
     font-size: 12px;
   }
 
-  .features_picto {
+  .features_picto img {
+    object-fit: cover;
     height: 30px;
     width: 30px;
 
     margin-right: 12px;
-    background-color: $Black15;
   }
 }
 
